@@ -13,9 +13,7 @@ def black_jack():
     
     #player starts playing
     while not player_hand >21:
-        if player_hand ==21:
-            print("you win, you only need to sell 1 of your kidneys now")
-
+        
         if player_input()== "hit":
             card=deck.pop()
             player_hand += card.value
@@ -29,14 +27,11 @@ def black_jack():
                 print("tie, we will be taking your left foot")
             else:
                 print("you lose, we will be taking your wife and children, thank you come again")
-        
-
-        if player_hand ==21:
+    
+    if player_hand ==21:
             print("you win, you only need to sell 1 of your kidneys now")
-        if player_hand >21:
-            print("you lose, we taking 2 generations of your children, your left kidney , your wife, and your 2nd cousin from your mother's side")
-            
-        
+    if player_hand >21:
+            print("bust, you lose, we taking 2 generations of your children, your left kidney , your wife, and your 2nd cousin from your mother's side")
 
     
 
