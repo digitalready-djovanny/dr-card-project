@@ -36,7 +36,7 @@ def black_jack():
     
 
 def player_input():
-    x = input("Do you want to hit or stop, dont matter u going to lose anyway stooooooobid: ")
+    x = ""
     while x!= "hit" and x!= "stop":
         x = input("Do you want to hit or stop, dont matter u going to lose anyway stooooooobid: ")
     return x
