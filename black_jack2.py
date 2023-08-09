@@ -21,8 +21,118 @@ Bob = Player("Bob", [], 100 )
 
 computer = Player("computer", [], 100)
 
+def print_cards(cards, hidden):
+         
+    s = ""
+    for card in cards:
+        s = s + "\t ________________"
+    if hidden:
+        s += "\t ________________"
+    print(s)
+ 
+ 
+    s = ""
+    for card in cards:
+        s = s + "\t|                |"
+    if hidden:
+        s += "\t|                |"    
+    print(s)
+ 
+    s = ""
+    for card in cards:
+        if card.value == '10':
+            s = s + "\t|  {}            |".format(card.value)
+        else:
+            s = s + "\t|  {}             |".format(card.value)  
+    if hidden:
+        s += "\t|                |"    
+    print(s)
+ 
+    s = ""
+    for card in cards:
+        s = s + "\t|                |"
+    if hidden:
+        s += "\t|      * *       |"
+    print(s)    
+ 
+    s = ""
+    for card in cards:
+        s = s + "\t|                |"
+    if hidden:
+        s += "\t|    *     *     |"
+    print(s)    
+ 
+    s = ""
+    for card in cards:
+        s = s + "\t|                |"
+    if hidden:
+        s += "\t|   *       *    |"
+    print(s)    
+ 
+    s = ""
+    for card in cards:
+        s = s + "\t|                |"
+    if hidden:
+        s += "\t|   *       *    |"
+    print(s)    
+ 
+    s = ""
+    for card in cards:
+        s = s + "\t|       {}        |".format(card.suit)
+    if hidden:
+        s += "\t|          *     |"
+    print(s)    
+ 
+    s = ""
+    for card in cards:
+        s = s + "\t|                |"
+    if hidden:
+        s += "\t|         *      |"
+    print(s)    
+ 
+    s = ""
+    for card in cards:
+        s = s + "\t|                |"
+    if hidden:
+        s += "\t|        *       |"
+    print(s)
+ 
+    s = ""
+    for card in cards:
+        s = s + "\t|                |"
+    if hidden:
+        s += "\t|                |"
+    print(s)
+ 
+    s = ""
+    for card in cards:
+        s = s + "\t|                |"
+    if hidden:
+        s += "\t|                |"
+    print(s)    
+ 
+    s = ""
+    for card in cards:
+        if card.value == '10':
+            s = s + "\t|            {}  |".format(card.value)
+        else:
+            s = s + "\t|            {}   |".format(card.value)
+    if hidden:
+        s += "\t|        *       |"        
+    print(s)    
+         
+    s = ""
+    for card in cards:
+        s = s + "\t|________________|"
+    if hidden:
+        s += "\t|________________|"
+    print(s)        
+ 
+    print()
+#whenever new_card is called, print_cards will be called and  a card will be printed. Too bad the computer doesn't get that privilege.
 def new_card():
     card = deck.pop()
+    print_cards([card], hidden=False)
     return card
 
 def sum_Player():
@@ -84,6 +194,7 @@ def black_jack():
     
 
 if __name__ == "__main__":
+
     black_jack()
 
 
